@@ -1,0 +1,86 @@
+.head{
+    width: auto;
+    text-align: center;
+}
+
+.api{
+    display: flex;
+    justify-content: space-around;
+    margin: 5vh;
+}
+
+.api>div:nth-child(1){
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.api>div:nth-child(2){
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.vaqt{
+    width: auto;
+    height: auto;
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px;
+    border-left: 2px solid rgb(2, 153, 67, 0.9);
+    color: rgb(2, 153, 67, 0.9);
+    transition: all 0.3s ease;
+}
+
+.vaqt:hover{
+    border: none;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width:450px) and (max-width:800px){
+    .api{
+        display: block;
+        justify-content: center;
+    }
+
+    .api>div:nth-child(1){
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .api>div:nth-child(2){
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+@media (max-width:450px){
+    .api{
+        display: block;
+        justify-content: center;
+    }
+
+    .api>div:nth-child(1){
+        display: block;
+        width: 100%;
+    }
+
+    .api>div:nth-child(2){
+        display: block;
+        width: 100%;
+    }
+
+    .api>div .vaqt{
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 15px;
+    }
+}

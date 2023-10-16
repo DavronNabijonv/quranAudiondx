@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.section {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  // bu ichki divlarga
+  .firstpart {
+    width: 50%;
+    height: 550px;
+    overflow-y: scroll;
+    display: inline-block;
+    button {
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      background: rgba(255, 255, 255, 0.6);
+      cursor: pointer;
+      padding: 7px 20px;
+      margin: 0.3rem 0.5rem;
+      width: 45%;
+      border: none;
+    }
+  }
+
+  .firstpart {
+    scrollbar-width: thin;
+    scrollbar-color: #4d7fff #ddd;
+  }
+
+  .firstpart::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .secondpart {
+    width: 50%;
+    height: 550px;
+    display: block;
+    div {
+      animation: part 1s forwards;
+      .prt1 {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+        text-align: center;
+        background: #d5caca;
+        border-radius: 10px;
+        padding-top: 10px;
+        button{
+          background: none;
+          border: none;
+          float: left;
+          cursor: pointer;
+          padding: 5px 8px 15px 20px;
+          svg{
+            width: 20px;
+            height: 20px;
+          }
+        }
+        p {
+          margin-top: 10px;
+        }
+      }
+      .forstyle {
+        height: 440px;
+        border-radius: 10px;
+        overflow-y: scroll;
+        .prt2 {
+          border-radius: 10px;
+          width: 100%;
+          background: #fff;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+          margin: 20px 0;
+          padding: 20px;
+          p{
+            margin: 15px 0 10px 0;
+          }
+          p:nth-child(1){
+            margin-top: 0;
+            color: #520cca;
+            font-size: 20px;
+            font-weight: 700;
+          
+          }
+        }
+      }
+      .forstyle {
+        scrollbar-width: thin;
+        scrollbar-color: #4d7fff #ddd;
+      }
+      .forstyle::-webkit-scrollbar {
+        width: 0px;
+      }
+    }
+    div {
+      width: 100%;
+    }
+  }
+  
+}
+
+@keyframes part{
+  from{
+    opacity: 0;
+    scale: 50%;
+  }
+  to{
+    scale: 100%;
+    opacity: 1;
+  }
+}
+
+@media(min-width:768px) and (max-width:1024px){
+  .section{
+    width: 100%;
+    gap: 0.5rem;
+    justify-content: center;
+    .firstpart{
+      width: auto;
+      button{
+        display: block;
+        width: 90%;
+      }
+    } 
+  }
+}
+
+.open{
+  display: none;
+  margin:2;
+}
+
+.close{
+  display: none;
+}
+
+@media(max-width:768px) {
+  .section{
+    width: 100%;
+    gap: 0rem;
+    margin-top: 40px;
+    justify-content: center;
+    .firstpart{
+      width: 70%;
+      height: 710px;
+      button{
+        display: block;
+        width: 90%;
+      }
+    } 
+    div{
+      .audioContent{
+        animation: part 1s forwards;
+        height: 710px;
+        width: 95%;
+        margin: auto;
+        .prt1 {
+          width: 100%;
+          height: 100px;
+          margin-bottom: 10px;
+          text-align: center;
+          background: #d5caca;
+          border-radius: 10px;
+          padding-top: 10px;
+          button{
+            background: none;
+            border: none;
+            float: left;
+            cursor: pointer;
+            padding: 5px 8px 15px 20px;
+            svg{
+              width: 20px;
+              height: 20px;
+            }
+          }
+          p {
+            margin-top: 10px;
+          }
+        }
+        .forstyle {
+          height: 600px;
+          border-radius: 10px;
+          overflow-y: scroll;
+          .prt2 {
+            border-radius: 10px;
+            width: 100%;
+            background: #fff;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            margin: 20px 0;
+            padding: 20px;
+            p{
+              margin: 15px 0 10px 0;
+            }
+            p:nth-child(1){
+              margin-top: 0;
+              color: #520cca;
+              font-size: 20px;
+              font-weight: 700;
+            
+            }
+          }
+        }
+        .forstyle {
+          scrollbar-width: thin;
+          scrollbar-color: #4d7fff #ddd;
+        }
+        .forstyle::-webkit-scrollbar {
+          width: 0px;
+        }       
+      }
+    }
+  }
+}
